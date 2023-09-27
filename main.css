@@ -1,5 +1,9 @@
 :root {
-	--prim-color: ;
+	--color1: #6a6aff;
+	--color2: #ffd17b;
+	--color3: #62ff62;
+	--color4: #ff5f5f;
+	--color5: #1cbf1c;
 	--font1: "Poppins", sans-serif;
 	--font2: "Roboto", sans-serif;
 }
@@ -9,11 +13,20 @@
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	width: 8px;
+	height: 8px;
+}
 body {
 	font-family: var(--font1);
 }
 .d-none {
-	display: none;
+	display: none !important;
 }
 .navigation-left {
 	left: 0;
@@ -39,6 +52,8 @@ body {
 	font-size: 30px;
 	color: #1f1f1f;
 }
+/* .right-icons > :last-child {
+} */
 .close-bar {
 	display: flex;
 	justify-content: space-between;
@@ -53,6 +68,7 @@ body {
 .nav-items {
 	padding: 0 20px 20px;
 }
+
 .nav-items > ul > li {
 	display: block;
 	cursor: pointer;
@@ -122,13 +138,16 @@ body {
 	/* transition: all 500ms linear; */
 }
 .orange {
-	background-color: #ffd17b;
+	background-color: var(--color2);
 }
 .blue {
-	background-color: #6a6aff;
+	background-color: var(--color1);
 }
 .green {
-	background-color: #62ff62;
+	background-color: var(--color3);
+}
+.red {
+	background-color: var(--color4);
 }
 .gofull {
 	border-radius: 0;
@@ -145,14 +164,15 @@ body {
 	width: 100%;
 	height: 100%;
 	bottom: -100%;
-	transition: all 300ms linear;
+	transition: all 300ms ease-in-out;
 }
 .courceboxback {
 	height: 20%;
+	padding: 10px 20px;
 }
-.courceboxback > i {
+.courceboxback > div > i {
 	font-size: 30px;
-	padding: 5px 10px;
+	cursor: pointer;
 }
 .go_up {
 	bottom: 0;
@@ -160,8 +180,120 @@ body {
 
 .courcebody {
 	background-color: #ffffff;
-	height: 100%;
-	border-radius: 20px;
+	height: 80%;
 	padding: 20px;
-	/* border-radius: 20px 20px 0 0; */
+	/* border-radius: 20px; */
+	border-radius: 20px 20px 0 0;
+	overflow: scroll;
+}
+
+.logincontainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	top: 0;
+	position: fixed;
+	background: white;
+	transition: all 300ms linear;
+}
+.logincontainer_up {
+	top: -100%;
+}
+.loginbanner {
+	width: 100%;
+	padding: 20px;
+}
+.loginbanner > img {
+	width: 100%;
+}
+@media (max-width: 768px) {
+	.logincontainer {
+		flex-direction: column;
+	}
+}
+.loginbody > * {
+	width: 100%;
+}
+.loginbody {
+	width: 100%;
+	padding: 20px;
+}
+.loginbody > h2 {
+	text-align: center;
+}
+.loginbody > input {
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background: #f2f2f2;
+	margin: 10px 0;
+}
+.loginbody > [type="submit"] {
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background: var(--color1);
+	color: white;
+	margin: 10px 0;
+	cursor: pointer;
+}
+.aboutbox {
+	position: fixed;
+	padding: 20px;
+	background-color: var(--color1);
+	bottom: 0;
+	height: 100vh;
+	transition: all 300ms linear;
+}
+.aboutcontent {
+	overflow: scroll;
+	color: white;
+	height: 100%;
+	padding: 20px 0;
+}
+.aboutboxhide {
+	bottom: -100%;
+}
+.close-bottom-box {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.close-bottom-box > div > i {
+	cursor: pointer;
+	font-size: 30px;
+}
+.lectureslist > div {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border: 1px solid #0000001f;
+	margin: 10px 0;
+	border-radius: 10px;
+}
+.lectureslist > div:hover {
+	border: 1px solid #0000007b;
+}
+.green-color {
+	color: var(--color5);
+}
+.profilebox {
+	width: 100%;
+	background: white;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 100vw;
+	padding: 20px;
+	transition: all 300ms ease-in-out;
+}
+.profileboxhide {
+	left: 0;
+}
+.profileboxback {
+	cursor: pointer;
+	font-size: 30px;
 }

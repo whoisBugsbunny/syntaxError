@@ -20,10 +20,81 @@
 
 <body>
 
+    <div id="loginpage" class="logincontainer">
+        <div class="loginbanner">
+            <img src="images/educationimage.jpg" alt="" srcset="">
+        </div>
+        <div class="loginbox">
+            <!-- <div class="loginboxback"><i class="fa-solid fa-arrow-left"></i></div> -->
+            <div class="loginbody">
+                <h2>Login</h2>
+                <!-- <form action=""> -->
+                <input type="email" name="" id="useremail" placeholder="email">
+                <input type="password" name="" id="password" placeholder="password">
+                <input type="submit" id="loginbtn" value="login">
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="profilebox">
+        <div class="profileboxback"><i class="fa-solid fa-arrow-right"></i>
+            <h1>Profile</h1>
+        </div>
+        <div></div>
+    </div>
+
     <div class="courcebox">
-        <div class="courceboxback"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="courceboxback">
+            <div><i class="fa-solid fa-arrow-left"></i></div>
+            <div>
+                <h1>Subject name</h1>
+            </div>
+        </div>
         <div class="courcebody">
             <h2>Syllabus</h2>
+            <div class="lectureslist">
+                <div>
+                    <div>Lecture 1</div>
+                    <div><i class="fa-solid fa-circle-check green-color"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 2</div>
+                    <div><i class="fa-solid fa-circle-check green-color"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 3</div>
+                    <div><i class="fa-solid fa-circle-check green-color"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 4</div>
+                    <div><i class="fa-regular fa-circle"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 5</div>
+                    <div><i class="fa-regular fa-circle"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 6</div>
+                    <div><i class="fa-regular fa-circle"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 7</div>
+                    <div><i class="fa-regular fa-circle"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 8</div>
+                    <div><i class="fa-regular fa-circle"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 9</div>
+                    <div><i class="fa-regular fa-circle"></i></div>
+                </div>
+                <div>
+                    <div>Lecture 10</div>
+                    <div><i class="fa-regular fa-circle"></i></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -40,17 +111,51 @@
 
         <div class="nav-items">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#">Courses</a></li>
+                <li><a id="aboutus" href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
         </div>
     </div>
 
+
+    <div class="aboutbox aboutboxhide">
+        <div class="close-bottom-box">
+            <div id="close-bottom-btn"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="aboutcontent">
+            SYNTAXERROR is a group of students from Lovely Professional University who are passionate about solving the problems faced by students in rural areas. We believe that every student deserves access to quality education, regardless of their background or financial situation.
+            We are developing a system to enhance the quality of education in rural areas by addressing the following challenges:
+            <ul>
+                <li>Financial issues: We are providing a platform where students can learn for free or at a subsidized cost.</li>
+                <li>Internet issues: We are providing students with the ability to download lectures for offline viewing.</li>
+                <li>Biased scholarship system: We are providing the government with an education score that they can use to select students for scholarships based on their merit, rather than caste or gender.
+                    Our system will also provide the following benefits to students in rural areas:</li>
+                <li>Access to high-quality educational content: We will provide students with access to a wide range of high-quality educational content from top educators and institutions.</li>
+                <li>Personalized learning experience: Our system will use artificial intelligence to personalize the learning experience for each student based on their individual needs and interests.</li>
+                <li>Supportive community: Our system will provide students with access to a supportive community of learners and mentors.</li>
+            </ul>
+            We believe that our system can have a significant impact on the lives of students in rural areas by helping them to get the education they need to succeed. We are committed to working with the Government of Kerala to implement our system and make it available to all students in rural areas.
+            Our Team Members:
+            <ul>
+                <li>Ankit Sharma (12220051)</li>
+                <li>Satyajeet Gaur(12201232)</li>
+                <li>Ankit Kumar (12223423)</li>
+                <li>Pulakesh Mondal (12223087)</li>
+                <li>Surya Prakash (12202531)</li>
+                <li>Monalisha (12219996)</li>
+            </ul>
+        </div>
+    </div>
+
+
     <div class="navbar">
         <div id="burger"><i class="fa-solid fa-bars"></i></div>
-        <div><i class="fa-solid fa-user"></i></div>
+        <div class="right-icons">
+            <i id="notificationbtn" class="fa-solid fa-bell"></i>
+            <i id="profilebtn" style="margin-left: 20px;" class="fa-solid fa-user"></i>
+        </div>
     </div>
 
     <div class="banner">
@@ -80,6 +185,10 @@
             </div>
             <div class="courcesCard green">
                 <h2>Physics</h2>
+                <p>10/50</p>
+            </div>
+            <div class="courcesCard red">
+                <h2>Social Science</h2>
                 <p>10/50</p>
             </div>
         </div>
