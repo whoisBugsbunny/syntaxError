@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mentor</title>
+</head>
+
+<body>
+    <div class="test"></div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script> -->
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4LfPyfr7HLxStAST6Qy5_tyAn4T-NT1E",
+            authDomain: "syntaxerror-5189d.firebaseapp.com",
+            projectId: "syntaxerror-5189d",
+            storageBucket: "syntaxerror-5189d.appspot.com",
+            messagingSenderId: "56198039823",
+            appId: "1:56198039823:web:9d72bb8717418dac5f167a",
+            measurementId: "G-CTJ63WLTF8"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const readData = db.collection('mentors')
+            .doc('5th')
+            .collection('maths');
+
+        getData();
+        console.log("Hello");
+
+        function getData() {
+            // readData.get()
+            //     .then((doc) => {
+            //         console.log("Document data:", doc);
+            //         if (doc.exists) {
+            //             console.log("Document data:", doc.data());
+            //         } else {
+            //             // doc.data() will be undefined in this case
+            //             console.log("No such document!");
+            //         }
+            //     })
+            //     .catch((error) => {
+            //         console.log("Error getting document:", error);
+            //     });
+            readData.get()
+                .then(function(snap) {
+                    snap.docs.forEach(doc => {
+                        console.log("Helo");
+                        var mydata = doc.data();
+                        console.log(doc.id, " => ", mydata.name);
+
+                        // $('#table_body').append("<tr><td>" + mydata.name + "</td></tr>"); 
+                    });
+                })
+                .catch(function(error) {
+                    console.log("Got an error:", error);
+                });
+        }
+    </script>
+</body>
+
+</html>

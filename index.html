@@ -13,6 +13,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="main.css">
+
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script> -->
+
+
     <!-- js -->
     <script src="style.js" defer></script>
 
@@ -32,6 +46,7 @@
                 <input type="email" name="" id="useremail" placeholder="email">
                 <input type="password" name="" id="password" placeholder="password">
                 <input type="submit" id="loginbtn" value="login">
+                <input type="submit" id="Gloginbtn" onclick="googleSignup()" value="Google Sign up">
                 <!-- </form> -->
             </div>
         </div>
@@ -39,22 +54,34 @@
 
     <div class="profilebox">
         <div class="profileboxback"><i class="fa-solid fa-arrow-right"></i>
-            <h1>Profile</h1>
         </div>
-        <div></div>
+        <h1>Profile</h1>
+        <div class="profileboxdetails">
+            <div><span>Name </span><span id="pusername"></span></div>
+            <div><span>Email </span><span id="pemail">useremail</span></div>
+            <div><span>Age </span><span><input type="number" name="" id="page" placeholder="0"></span></div>
+            <div><span>Class </span><span><input type="text" name="" id="pclass" placeholder="th"></span></div>
+            <div><span>School Name </span><span><input type="text" name="" id="pSchool" placeholder="School name"></span></div>
+            <div><span>Fav Subject </span><span><input type="text" name="" id="pfsub" placeholder="Subject"></span></div>
+            <div><span>5th Score </span><span><input type="text" name="" id="p5th" placeholder="N/A"></span></div>
+            <div><span>10th Score </span><span><input type="text" name="" id="p10th" placeholder="N/A"></span></div>
+            <div><span>Progress </span><span id="pprogress">0%</span></div>
+            <div><span>Current Growth Rate (1-10) </span><span id="pgrowth">0</span></div>
+            <div class="psavebtn"><input id="psave" type="button" value="save"></div>
+        </div>
     </div>
 
     <div class="courcebox">
         <div class="courceboxback">
             <div><i class="fa-solid fa-arrow-left"></i></div>
             <div>
-                <h1>Subject name</h1>
+                <h1>English</h1>
             </div>
         </div>
         <div class="courcebody">
             <h2>Syllabus</h2>
             <div class="lectureslist">
-                <div>
+                <div onclick="window.open('https://firebasestorage.googleapis.com/v0/b/syntaxerror-5189d.appspot.com/o/Malayalam%2Fd.mp4?alt=media&token=afc9dd6e-6588-4eaf-9805-1324001c723d')">
                     <div>Lecture 1</div>
                     <div><i class="fa-solid fa-circle-check green-color"></i></div>
                 </div>
@@ -113,12 +140,12 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Courses</a></li>
-                <li><a id="aboutus" href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
+                <li><a id="aboutus" href="#">About us</a></li>
+                <li><a onclick="logout()">Logout</a></li>
             </ul>
         </div>
     </div>
-
 
     <div class="aboutbox aboutboxhide">
         <div class="close-bottom-box">
@@ -159,7 +186,7 @@
     </div>
 
     <div class="banner">
-        <div>hey,<br><span name="name">username</span></div>
+        <div>hey,<br><span name="name" id="user_name">username</span></div>
         <h1>Let's Start Learning</h1>
     </div>
 
@@ -172,7 +199,7 @@
 
     <div class="cources">
         <div class="heading1">
-            <span>continue cources</span><span>see all</span>
+            <span>Your Subjects</span><span><i class="fa-solid fa-book"></i></span>
         </div>
         <div class="listCources">
             <div class="courcesCard orange">

@@ -1,0 +1,244 @@
+:root {
+	--pri-color: tomato;
+	--sec-color: blue;
+	--pad1: 5px;
+	--radi1: 5px;
+	--font1: "Poppins", sans-serif;
+	--font2: "Roboto", sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font1);
+}
+
+.nav {
+	height: 80px;
+	display: flex;
+	background-color: gray;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+.nav-logo img {
+	height: 50px;
+	fill: var(--pri-color);
+}
+.nav-right {
+	gap: 20px;
+	display: flex;
+	align-items: center;
+}
+.nav a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+}
+
+.nav-center input {
+	outline: none;
+	background-color: transparent;
+	border: none;
+}
+.nav-center {
+	gap: 10px;
+	background-color: white;
+	padding: 10px 20px;
+	border: 1px solid black;
+	border-radius: 50px;
+}
+button {
+	background-color: var(--pri-color);
+	border: none;
+	border-radius: 50px;
+	padding: 10px 20px;
+	color: white;
+	font-weight: bold;
+}
+/* ------------------------------------------------------------- */
+.hero {
+	display: flex;
+	/* height: 400px; */
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0px;
+}
+.hero-right img {
+	padding-right: 30px;
+	height: 400px;
+	border-radius: 200px;
+}
+.hero-left {
+	width: 50%;
+	padding-left: 30px;
+}
+.hero-left h1 {
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.hero-left h4 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.hero-left span {
+	color: var(--pri-color);
+}
+/* -------------------------------------------------------------- */
+.services {
+	padding: 30px 80px;
+}
+.services h1 {
+	font-size: 30px;
+	text-align: center;
+}
+.card-container {
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	/* padding: 30px 0px; */
+}
+.service-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 20%;
+	/* padding: 20px; */
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid gray;
+	/* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); */
+}
+.service-card h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+/* ------------------------------------------------------------------------- */
+.course-container {
+	/* text-align: center; */
+	padding: 30px 80px;
+}
+.course-container h1 {
+	font-size: 30px;
+	text-align: center;
+}
+.course-container-description {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.course-card-container {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 30px 0px;
+}
+.course-card {
+	display: flex;
+	flex-direction: column;
+	align-items: right;
+	justify-content: space-between;
+	width: 25%;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid gray;
+}
+.course-card img {
+	width: 100%;
+	border-radius: 7px;
+}
+.course-card small {
+	padding: 5px 0;
+	display: inline;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 500;
+}
+.title {
+	display: flex;
+	justify-content: space-between;
+}
+.title h3 {
+	font-size: 20px;
+}
+.course-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* gap: 10px; */
+}
+.course-price img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+.course-price h4,
+.course-price p {
+	font-size: 14px;
+}
+.course-profile {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	/* flex-direction: column; */
+}
+.course-price h3 {
+	font-size: 20px;
+}
+/* .course-button {
+    position: relative;
+    display: block;
+    text-align: center;
+} */
+
+.signup-popup {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 40%;
+	background-color: black;
+	height: 200px;
+	border: 1px solid gray;
+	border-radius: 30px;
+}
+.with-socials {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 0 20px;
+	height: 50px;
+	background-color: white;
+}
+.with-socials i {
+	border-radius: 10px;
+	border: 1px solid black;
+	font-size: 20px;
+	text-align: center;
+}
+.top {
+	display: flex;
+	justify-content: space-evenly;
+	width: auto;
+}
+
+.h1,
+h1 {
+	font-size: 25px;
+}
+
+links {
+	list-style: none;
+}
+
+.headings {
+	width: 33.33%;
+}
+
+.footer li {
+	list-style-type: none;
+}
