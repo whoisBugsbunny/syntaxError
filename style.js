@@ -9,6 +9,9 @@ const password = document.querySelector('#password');
 const loginbtn = document.querySelector('#loginbtn');
 const loginpage = document.querySelector('#loginpage');
 const aboutus = document.querySelector('#aboutus');
+const contactus = document.querySelector('#contactus');
+const aboutcontent = document.querySelector('.aboutcontent');
+const contactcontent = document.querySelector('.contactcontent');
 const aboutbox = document.querySelector('.aboutbox');
 const closeBottomBtn = document.querySelector('#close-bottom-btn');
 const profileBtn = document.querySelector('#profilebtn');
@@ -52,10 +55,18 @@ loginbtn.addEventListener('click', () => {
 aboutus.addEventListener('click', () => {
     navigation.classList.toggle('h-left');
     aboutbox.classList.toggle('aboutboxhide');
+    aboutcontent.classList.toggle('d-none');
+});
+contactus.addEventListener('click', () => {
+    navigation.classList.toggle('h-left');
+    aboutbox.classList.toggle('aboutboxhide');
+    contactcontent.classList.toggle('d-none');
 });
 
 closeBottomBtn.addEventListener('click', () => {
     aboutbox.classList.toggle('aboutboxhide');
+    aboutcontent.classList.add('d-none');
+    contactcontent.classList.add('d-none');
 });
 
 profileBtn.addEventListener('click', () => {
@@ -157,7 +168,7 @@ function showdatamy(user) {
     readData.get()
         .then((doc) => {
             if (doc.exists) {
-                console.log("Document data:", doc.data());
+                // console.log("Document data:", doc.data());
                 page.value = doc.data().Age;
                 pclass.value = doc.data().Class;
                 pSchool.value = doc.data().SchoolName;
