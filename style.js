@@ -7,6 +7,7 @@ const courceboxback = document.querySelector('.courceboxback');
 const useremail = document.querySelector('#useremail');
 const password = document.querySelector('#password');
 const loginbtn = document.querySelector('#loginbtn');
+const guestbtn = document.querySelector('#guestbtn');
 const loginpage = document.querySelector('#loginpage');
 const aboutus = document.querySelector('#aboutus');
 const contactus = document.querySelector('#contactus');
@@ -211,8 +212,9 @@ function googleSignup() {
     });
 }
 
-
-
+guestbtn.addEventListener('click', () => {
+    loginpage.classList.add('logincontainer_up');
+});
 
 function logout() {
     firebase.auth().signOut();

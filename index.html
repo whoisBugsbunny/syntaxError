@@ -34,226 +34,238 @@
 
 <body>
 
-    <div id="loginpage" class="logincontainer">
-        <div class="loginbanner">
-            <img src="images/educationimage.jpg" alt="" srcset="">
-        </div>
-        <div class="loginbox">
-            <!-- <div class="loginboxback"><i class="fa-solid fa-arrow-left"></i></div> -->
-            <div class="loginbody">
-                <h2>Login</h2>
-                <!-- <form action=""> -->
-                <input type="email" name="" id="useremail" placeholder="email">
-                <input type="password" name="" id="password" placeholder="password">
-                <input type="submit" id="loginbtn" value="login">
-                <input type="submit" id="Gloginbtn" onclick="googleSignup()" value="Google Sign up">
-                <!-- </form> -->
-            </div>
-        </div>
-    </div>
-
-    <div class="profilebox">
-        <div class="profileboxback"><i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <h1>Profile</h1>
-        <div class="profileboxdetails">
-            <div><span>Name </span><span id="pusername"></span></div>
-            <div><span>Email </span><span id="pemail">useremail</span></div>
-            <div><span>Age </span><span><input type="number" name="" id="page" placeholder="0"></span></div>
-            <div><span>Class </span><span><input type="text" name="" id="pclass" placeholder="th"></span></div>
-            <div><span>School Name </span><span><input type="text" name="" id="pSchool" placeholder="School name"></span></div>
-            <div><span>Fav Subject </span><span><input type="text" name="" id="pfsub" placeholder="Subject"></span></div>
-            <div><span>5th Score </span><span><input type="text" name="" id="p5th" placeholder="N/A"></span></div>
-            <div><span>10th Score </span><span><input type="text" name="" id="p10th" placeholder="N/A"></span></div>
-            <div><span>Progress </span><span id="pprogress">0%</span></div>
-            <div><span>Current Growth Rate (1-10) </span><span id="pgrowth">0</span></div>
-            <div class="psavebtn"><input id="psave" type="button" value="save"></div>
-        </div>
-    </div>
-
-    <div class="courcebox">
-        <div class="courceboxback">
-            <div><i class="fa-solid fa-arrow-left"></i></div>
-            <div>
-                <h1>English</h1>
-            </div>
-        </div>
-        <div class="courcebody">
-            <h2>Syllabus</h2>
-            <div class="lectureslist">
-                <div>
-                    <div>Lecture 1</div>
-                    <div onclick="window.open('https://firebasestorage.googleapis.com/v0/b/syntaxerror-5189d.appspot.com/o/Malayalam%2Fd.mp4?alt=media&token=afc9dd6e-6588-4eaf-9805-1324001c723d')">Video</div>
-                    <div onclick="window.open('https://firebasestorage.googleapis.com/v0/b/syntaxerror-5189d.appspot.com/o/English%2FParts-of-Speech-Handout2.pdf?alt=media&token=fe7735ee-16fc-4e8a-96eb-b469f68698e5')">Notes</div>
-
-                    <div><i class="fa-solid fa-circle-check green-color"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 2</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-solid fa-circle-check green-color"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 3</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-solid fa-circle-check green-color"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 4</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-regular fa-circle"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 5</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-regular fa-circle"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 6</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-regular fa-circle"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 7</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-regular fa-circle"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 8</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-regular fa-circle"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 9</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-regular fa-circle"></i></div>
-                </div>
-                <div>
-                    <div>Lecture 10</div>
-                    <div>Video</div>
-                    <div>Notes</div>
-                    <div><i class="fa-regular fa-circle"></i></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="navigation-left h-left">
-        <div class="close-bar">
-            <div class="logo">
-                <i class="fa-brands fa-kickstarter"></i>
-                <!-- <img src="images/logo.png" alt=""> -->
-            </div>
-            <div id="close-nav"><i class="fa-solid fa-xmark"></i></div>
-        </div>
-
-
-        <div class="nav-items">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a id="contactus" href="#">Contact us</a></li>
-                <li><a id="aboutus" href="#">About us</a></li>
-                <li><a onclick="logout()">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="aboutbox aboutboxhide">
-        <div class="close-bottom-box">
-            <div id="close-bottom-btn"><i class="fa-solid fa-xmark"></i></div>
-        </div>
-        <div class="aboutcontent d-none">
-            SYNTAXERROR is a group of students from Lovely Professional University who are passionate about solving the problems faced by students in rural areas. We believe that every student deserves access to quality education, regardless of their background or financial situation.
-            We are developing a system to enhance the quality of education in rural areas by addressing the following challenges:
-            <ul>
-                <li>Financial issues: We are providing a platform where students can learn for free or at a subsidized cost.</li>
-                <li>Internet issues: We are providing students with the ability to download lectures for offline viewing.</li>
-                <li>Biased scholarship system: We are providing the government with an education score that they can use to select students for scholarships based on their merit, rather than caste or gender.
-                    Our system will also provide the following benefits to students in rural areas:</li>
-                <li>Access to high-quality educational content: We will provide students with access to a wide range of high-quality educational content from top educators and institutions.</li>
-                <li>Personalized learning experience: Our system will use artificial intelligence to personalize the learning experience for each student based on their individual needs and interests.</li>
-                <li>Supportive community: Our system will provide students with access to a supportive community of learners and mentors.</li>
-            </ul>
-            We believe that our system can have a significant impact on the lives of students in rural areas by helping them to get the education they need to succeed. We are committed to working with the Government of Kerala to implement our system and make it available to all students in rural areas.
-            Our Team Members:
-            <ul>
-                <li>Ankit Sharma (12220051)</li>
-                <li>Satyajeet Gaur(12201232)</li>
-                <li>Ankit Kumar (12223423)</li>
-                <li>Pulakesh Mondal (12223087)</li>
-                <li>Surya Prakash (12202531)</li>
-                <li>Monalisha (12219996)</li>
-            </ul>
-        </div>
-        <div class="contactcontent d-none">
-            <ul>
-                <li>Ankit Sharma - aankitsharmaa422@gmail.com</li>
-                <li>Satyajeet Gaur - the.satyajeetgaur@gmail.com</li>
-                <li>Ankit Kumar - ak373714@gmail.com</li>
-                <li>Pulakesh Mondal - pulak4467@gmail.com</li>
-                <li>Surya Prakash - surya.qre@gmail.com</li>
-                <li>Monalisha - lishamona7369@gmail.com</li>
-            </ul>
-
-            Lovely Professional University,
-            Jalandhar - Delhi G.T. Road,
-            Phagwara, Punjab (India), 144411
-            Toll Free: 1800 3001 1800
-            Fax: +91-1824-506111
-        </div>
-    </div>
-
-
-    <div class="navbar">
-        <div id="burger"><i class="fa-solid fa-bars"></i></div>
-        <div class="right-icons">
-            <i id="notificationbtn" class="fa-solid fa-bell"></i>
-            <i id="profilebtn" style="margin-left: 20px;" class="fa-solid fa-user"></i>
-        </div>
-    </div>
-
-    <div class="banner">
-        <div>hey,<br><span name="name" id="user_name">username</span></div>
-        <h1>Let's Start Learning</h1>
-    </div>
-
-    <div class="search-bar">
+    <div class="bodycontain">
         <div>
-            <input type="search" name="" id="" placeholder="find your cource">
-            <!-- <input type="button" value="search"> -->
-        </div>
-    </div>
+            <div id="loginpage" class="logincontainer">
+                <div class="loginbanner">
+                    <img src="images/educationimage.jpg" alt="" srcset="">
+                </div>
+                <div class="loginbox">
+                    <!-- <div class="loginboxback"><i class="fa-solid fa-arrow-left"></i></div> -->
+                    <div class="loginbody">
+                        <h2>Login</h2>
+                        <!-- <form action=""> -->
+                        <input type="email" name="" id="useremail" placeholder="email">
+                        <input type="password" name="" id="password" placeholder="password">
+                        <input type="submit" id="loginbtn" value="login">
+                        <input type="submit" id="guestbtn" value="Guest">
+                        <input type="submit" id="Gloginbtn" onclick="googleSignup()" value="Google Signup">
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
 
-    <div class="cources">
-        <div class="heading1">
-            <span>Your Subjects</span><span><i class="fa-solid fa-book"></i></span>
-        </div>
-        <div class="listCources">
-            <div class="courcesCard orange">
-                <h2>English</h2>
-                <p>3/10</p>
+            <div class="profilebox">
+                <div class="profileboxback"><i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <h1>Profile</h1>
+                <div class="profileboxdetails">
+                    <div><span>Name </span><span id="pusername"></span></div>
+                    <div><span>Email </span><span id="pemail">useremail</span></div>
+                    <div><span>Age </span><span><input type="number" name="" id="page" placeholder="0"></span></div>
+                    <div><span>Class </span><span><input type="text" name="" id="pclass" placeholder="th"></span></div>
+                    <div><span>School Name </span><span><input type="text" name="" id="pSchool" placeholder="School name"></span></div>
+                    <div><span>Fav Subject </span><span><input type="text" name="" id="pfsub" placeholder="Subject"></span></div>
+                    <div><span>5th Score </span><span><input type="text" name="" id="p5th" placeholder="N/A"></span></div>
+                    <div><span>10th Score </span><span><input type="text" name="" id="p10th" placeholder="N/A"></span></div>
+                    <div><span>Progress </span><span id="pprogress">0%</span></div>
+                    <div><span>Current Growth Rate (1-10) </span><span id="pgrowth">0</span></div>
+                    <div class="psavebtn"><input id="psave" type="button" value="save"></div>
+                </div>
             </div>
-            <div class="courcesCard blue">
-                <h2>Science</h2>
-                <p>5/15</p>
+
+            <div class="courcebox">
+                <div class="courceboxback">
+                    <div><i class="fa-solid fa-arrow-left"></i></div>
+                    <div>
+                        <h1>English</h1>
+                    </div>
+                </div>
+                <div class="courcebody">
+                    <h2>Syllabus</h2>
+                    <div class="lectureslist">
+                        <div>
+                            <div>Lecture 1</div>
+                            <div onclick="window.open('https://firebasestorage.googleapis.com/v0/b/syntaxerror-5189d.appspot.com/o/Malayalam%2Fd.mp4?alt=media&token=afc9dd6e-6588-4eaf-9805-1324001c723d')">Video</div>
+                            <div onclick="window.open('https://firebasestorage.googleapis.com/v0/b/syntaxerror-5189d.appspot.com/o/English%2FParts-of-Speech-Handout2.pdf?alt=media&token=fe7735ee-16fc-4e8a-96eb-b469f68698e5')">Notes</div>
+
+                            <div><i class="fa-solid fa-circle-check green-color"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 2</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-solid fa-circle-check green-color"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 3</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-solid fa-circle-check green-color"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 4</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-regular fa-circle"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 5</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-regular fa-circle"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 6</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-regular fa-circle"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 7</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-regular fa-circle"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 8</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-regular fa-circle"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 9</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-regular fa-circle"></i></div>
+                        </div>
+                        <div>
+                            <div>Lecture 10</div>
+                            <div>Video</div>
+                            <div>Notes</div>
+                            <div><i class="fa-regular fa-circle"></i></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="courcesCard green">
-                <h2>Physics</h2>
-                <p>2/8</p>
+
+
+            <div class="navigation-left h-left">
+                <div class="close-bar">
+                    <div class="logo">
+                        <i class="fa-brands fa-kickstarter"></i>
+                        <!-- <img src="images/logo.png" alt=""> -->
+                    </div>
+                    <div id="close-nav"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+
+
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a id="contactus" href="#">Contact us</a></li>
+                        <li><a id="aboutus" href="#">About us</a></li>
+                        <li><a onclick="logout()">Logout</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="courcesCard red">
-                <h2>Social Science</h2>
-                <p>10/20</p>
+
+            <div class="aboutbox aboutboxhide">
+                <div class="close-bottom-box">
+                    <div id="close-bottom-btn"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <div class="aboutcontent d-none">
+                    SYNTAXERROR is a group of students from Lovely Professional University who are passionate about solving the problems faced by students in rural areas. We believe that every student deserves access to quality education, regardless of their background or financial situation.
+                    We are developing a system to enhance the quality of education in rural areas by addressing the following challenges:
+                    <ul>
+                        <li>Financial issues: We are providing a platform where students can learn for free or at a subsidized cost.</li>
+                        <li>Internet issues: We are providing students with the ability to download lectures for offline viewing.</li>
+                        <li>Biased scholarship system: We are providing the government with an education score that they can use to select students for scholarships based on their merit, rather than caste or gender.
+                            Our system will also provide the following benefits to students in rural areas:</li>
+                        <li>Access to high-quality educational content: We will provide students with access to a wide range of high-quality educational content from top educators and institutions.</li>
+                        <li>Personalized learning experience: Our system will use artificial intelligence to personalize the learning experience for each student based on their individual needs and interests.</li>
+                        <li>Supportive community: Our system will provide students with access to a supportive community of learners and mentors.</li>
+                    </ul>
+                    We believe that our system can have a significant impact on the lives of students in rural areas by helping them to get the education they need to succeed. We are committed to working with the Government of Kerala to implement our system and make it available to all students in rural areas.
+                    Our Team Members:
+                    <ul>
+                        <li>Ankit Sharma (12220051)</li>
+                        <li>Satyajeet Gaur(12201232)</li>
+                        <li>Ankit Kumar (12223423)</li>
+                        <li>Pulakesh Mondal (12223087)</li>
+                        <li>Surya Prakash (12202531)</li>
+                        <li>Monalisha (12219996)</li>
+                    </ul>
+                </div>
+                <div class="contactcontent d-none">
+                    <ul>
+                        <li>Ankit Sharma - aankitsharmaa422@gmail.com</li>
+                        <li>Satyajeet Gaur - the.satyajeetgaur@gmail.com</li>
+                        <li>Ankit Kumar - ak373714@gmail.com</li>
+                        <li>Pulakesh Mondal - pulak4467@gmail.com</li>
+                        <li>Surya Prakash - surya.qre@gmail.com</li>
+                        <li>Monalisha - lishamona7369@gmail.com</li>
+                    </ul>
+
+                    Lovely Professional University,
+                    Jalandhar - Delhi G.T. Road,
+                    Phagwara, Punjab (India), 144411
+                    Toll Free: 1800 3001 1800
+                    Fax: +91-1824-506111
+                </div>
+            </div>
+
+            <div class="mainpage">
+
+                <div class="navbar">
+                    <div id="burger"><i class="fa-solid fa-bars"></i></div>
+                    <div class="right-icons">
+                        <i id="notificationbtn" class="fa-solid fa-bell"></i>
+                        <i id="profilebtn" style="margin-left: 20px;" class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+                <div class="banner">
+                    <div>hey,<br><span name="name" id="user_name">username</span></div>
+                    <h1>Let's Start Learning</h1>
+                </div>
+
+                <div class="search-bar">
+                    <div>
+                        <input type="search" name="" id="" placeholder="find your cource">
+                        <!-- <input type="button" value="search"> -->
+                    </div>
+                </div>
+
+                <div class="cources">
+                    <div class="heading1">
+                        <span>Your Subjects</span><span><i class="fa-solid fa-book"></i></span>
+                    </div>
+                    <div class="listCources">
+                        <div class="courcesCard orange">
+                            <h2>English</h2>
+                            <p>3/10</p>
+                        </div>
+                        <div class="courcesCard blue">
+                            <h2>Science</h2>
+                            <p>5/15</p>
+                        </div>
+                        <div class="courcesCard green">
+                            <h2>Physics</h2>
+                            <p>2/8</p>
+                        </div>
+                        <div class="courcesCard red">
+                            <h2>Social Science</h2>
+                            <p>10/20</p>
+                        </div>
+                        <div class="courcesCard pink">
+                            <h2>Maths</h2>
+                            <p>10/20</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

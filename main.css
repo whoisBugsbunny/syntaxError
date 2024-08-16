@@ -4,6 +4,7 @@
 	--color3: #62ff62;
 	--color4: #ff5f5f;
 	--color5: #1cbf1c;
+	--color6: #ff62ff;
 	--font1: "Poppins", sans-serif;
 	--font2: "Roboto", sans-serif;
 }
@@ -14,8 +15,8 @@
 	scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
+	width: 0px;
+	height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -24,6 +25,13 @@
 }
 body {
 	font-family: var(--font1);
+}
+.bodycontain {
+	width: 100%;
+	background: linear-gradient(45deg, #e91e63, #673ab7);
+}
+.bodycontain > div {
+	background-color: white;
 }
 .d-none {
 	display: none !important;
@@ -113,7 +121,7 @@ body {
 .search-bar > div > :first-child {
 	padding: 10px 20px;
 	border: none;
-	border-radius: 40px;
+	border-radius: 15px;
 	background: #f2f2f2;
 	width: 100%;
 	font-size: 1em;
@@ -130,6 +138,7 @@ body {
 .listCources {
 	padding: 0 20px;
 }
+
 .courcesCard {
 	min-height: 100px;
 	border-radius: 20px;
@@ -148,6 +157,9 @@ body {
 }
 .red {
 	background-color: var(--color4);
+}
+.pink {
+	background-color: var(--color6);
 }
 .gofull {
 	border-radius: 0;
@@ -189,29 +201,32 @@ body {
 
 .logincontainer {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	width: 100%;
 	top: 0;
 	position: fixed;
 	background: white;
 	transition: all 300ms linear;
 }
+
 .logincontainer_up {
 	top: -100%;
 }
 .loginbanner {
 	width: 100%;
 	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .loginbanner > img {
 	width: 100%;
+	max-width: 30rem;
 }
-@media (max-width: 768px) {
-	.logincontainer {
-		flex-direction: column;
-	}
-}
+
 .loginbody > * {
 	width: 100%;
 }
@@ -238,10 +253,11 @@ body {
 	margin: 10px 0;
 	cursor: pointer;
 }
+
 .aboutbox {
 	position: fixed;
 	padding: 20px;
-	background-color: #f4f4f4;
+	background-color: white;
 	bottom: 0;
 	height: 100vh;
 	width: 100%;
@@ -253,7 +269,7 @@ body {
 	padding: 20px 0;
 }
 .aboutboxhide {
-	bottom: -100%;
+	bottom: -100vh;
 }
 .close-bottom-box {
 	display: flex;
@@ -299,6 +315,9 @@ body {
 }
 .profileboxdetails > div {
 	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .profileboxdetails > div > :first-child {
 	font-weight: bold;
@@ -324,4 +343,36 @@ body {
 }
 #psave:active {
 	background: var(--color3);
+}
+
+/* @ full screen */
+
+@media (min-width: 700px) {
+	.courcebox,
+	.logincontainer,
+	.profilebox,
+	.aboutbox,
+	.navigation-left {
+		position: absolute;
+	}
+	.mainpage {
+		height: 100vh;
+		overflow: scroll;
+	}
+	.bodycontain {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+		background-color: #ecff95;
+	}
+	.bodycontain > div {
+		position: absolute;
+		width: 100%;
+		max-width: 500px;
+		background: white;
+		overflow: hidden;
+	}
 }
