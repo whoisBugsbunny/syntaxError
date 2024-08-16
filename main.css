@@ -376,3 +376,39 @@ body {
 		overflow: hidden;
 	}
 }
+
+/* warning for full screen */
+
+.warning {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.warningcontent {
+	padding: 10px;
+	background: cadetblue;
+	font-weight: 500;
+}
+.warningcontent > p {
+	margin: 10px 0;
+	padding: 5px 10px;
+}
+.warningcontent :nth-child(2) {
+	background: yellow;
+}
+.warningcontent :nth-child(3) {
+	background: red;
+}
+.warningbtn {
+	cursor: pointer;
+	padding: 5px 10px;
+	background: white;
+	border-radius: 5px;
+	margin-top: 10px;
+	width: 100%;
+}

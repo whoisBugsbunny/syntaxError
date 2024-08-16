@@ -212,11 +212,19 @@ function googleSignup() {
     });
 }
 
-guestbtn.addEventListener('click', () => {
-    loginpage.classList.add('logincontainer_up');
-});
 
 function logout() {
     firebase.auth().signOut();
     window.open("index.html", "_self");
 }
+
+guestbtn.addEventListener('click', () => {
+    loginpage.classList.add('logincontainer_up');
+});
+
+const warningbtn = document.querySelector('#warningbtn');
+const warningbox = document.querySelector('#warningbox');
+
+warningbtn.addEventListener('click', () => {
+    warningbox.classList.add('d-none');
+});
